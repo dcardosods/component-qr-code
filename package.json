@@ -1,0 +1,32 @@
+{
+  "name": "component-qr-code",
+  "author": {
+    "name": "Daniel Cardoso",
+    "email": "danielcardosods@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dcardosods/component-qr-code.git"
+  },
+  "licenses": [
+  	{
+  	  "type": "MIT",
+  	  "url": "http://opensource.org/licenses/MIT"
+  	},
+    {
+      "type": "MPL-2.0",
+      "url": "http://www.mozilla.org/MPL/2.0/"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-contrib-csslint": "~0.1.2",
+    "grunt-lint-inline": "~0.3.2",
+    "open": "0.0.4",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-open": "~0.2.2",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+  "keywords": []
+}

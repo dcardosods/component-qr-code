@@ -1,0 +1,6 @@
+{
+	"ceci-qr-code": "qr-code",
+	"ceci-qr-code/attributes/label": "Data",
+	"ceci-qr-code/attributes/label/label": "Data",
+	"ceci-qr-code/attributes/label/description": "The information encoded by the QR code",
+}

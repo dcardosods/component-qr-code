@@ -1,46 +1,31 @@
-# &lt;qr-code&gt;
+QR Code Appmaker component
+================
 
-Web Component wrapper for generating QR Codes, using [qrjs](http://hg.mearie.org/qrjs/) lib.
+A web component for [Appmaker](https://github.com/mozilla-appmaker/appmaker).
 
-> Maintained by [Eduard C.](https://github.com/educastellano).
+> It is a fork/port of [&lt;qr-code&gt; Web Component](https://github.com/educastellano/qr-code) by [Eduard C.](https://github.com/educastellano).
 
-## Demo
 
-> [Check it live](http://educastellano.github.io/qr-code).
+Appmaker import:
+```
+<link rel="import" href="/qr-code">
+```
+
+Check if the component is being served going to `http://dcardosods.github.io/component-qr-code/component.css
+
 
 ## Usage
 
-1. Import Web Components' polyfill:
-
-	```html
-	<script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.0.20130905/polymer.min.js"></script>
-	```
-
-2. Import Custom Element:
-
-	```html
-	<link rel="import" href="src/qr-code.html">
-	```
-
-3. Import [qrjs](http://hg.mearie.org/qrjs/) lib:
-
-	```html
-	<script src="src/qr.js"></script>
-	```
-
-4. Start using it!
-
-	```html
-	<qr-code data="hello world!"></qr-code>
-	```
+```
+TODO
+```
 
 ## Options
 
 Attribute  | Options                   | Default             | Description
 ---        | ---                       | ---                 | ---
 `data`     | *string*                  | `undefined`         | The information encoded by the QR code
-`format`   | `png`, `html`      	   | `png`               | Format of the QR code rendered inside the component.
-
+`format`   | `png`, `html`             | `png`               | Format of the QR code rendered inside the component.
 
 ## Contributing
 
@@ -52,9 +37,13 @@ Attribute  | Options                   | Default             | Description
 
 ## History
 
+* v0.1.0 March 08, 2013
+    * Port project to Appmaker using [component-template](https://github.com/mozilla-appmaker/component-template)
 * v0.0.1 September 18, 2013
-	* Started project using [boilerplate-element](https://github.com/customelements/boilerplate-element)
+    * Started project using [boilerplate-element](https://github.com/customelements/boilerplate-element)
 
-## License
+## Licenses
 
 [MIT License](http://opensource.org/licenses/MIT)
+
+[MPL-2.0](http://www.mozilla.org/MPL/2.0/)

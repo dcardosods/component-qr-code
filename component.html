@@ -1,0 +1,74 @@
+<polymer-element name="ceci-qr-code" attributes="data" extends="ceci-element"
+  data="bla bla blaaaaaaaaaahhh">
+  <script src="src/vendor/qr.js"></script>
+  <template>
+    <link rel="stylesheet" href="component.css"></link>
+    <div id="component_qr_code"></div>
+    <shadow></shadow>
+    <script type="text/json" id="ceci-definition">
+      {
+        "name": "qr-code",
+        "tags": ["qr-code"],
+        "thumbnail": "",
+        "broadcasts": {
+
+        },
+        "listeners": {
+
+        },
+        "attributes": {
+          "data": {
+            "label": "Data",
+            "description": "The information encoded by the QR code.",
+            "editable": "text",
+            "listener": false
+          }
+        }
+      }
+    </script>
+  </template>
+  <script>
+    Polymer('ceci-qr-code', {
+      ready: function () {
+        this.super();
+      },
+      dataChanged: function (oldValue, newValue) {
+        this.generate();
+      },
+      format: 'png',
+      generate: function () {
+        if (this.format === 'png') {
+          this.generatePNG();
+        }
+        else {
+          this.generateHTML();
+        }
+      },
+      generatePNG: function () {
+        var img;
+        try {
+          img = document.createElement('img');
+          img.src = QRCode.generatePNG(this.data);
+          this.clear();
+          this.$.component_qr_code.appendChild(img);
+        }
+        catch (e) {
+          console.log(e.message);
+        }
+      },
+      generateHTML: function () {
+        try {
+          var div = QRCode.generateHTML(this.data);
+          this.clear();
+          this.$.component_qr_code.appendChild(div);
+        }
+        catch (e) {
+          console.log(e.message);
+        }
+      },
+      clear: function () {
+        this.$.component_qr_code.innerHTML = '';
+      }
+    });
+  </script>
+</polymer-element>
