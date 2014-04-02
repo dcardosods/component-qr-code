@@ -1,5 +1,5 @@
-<polymer-element name="ceci-qr-code" attributes="data" extends="ceci-element"
-  data="bla bla blaaaaaaaaaahhh">
+<polymer-element name="ceci-qr-code" attributes="text" extends="ceci-element"
+  text="bla bla blaaaaaaaaaahhh">
   <script src="src/vendor/qr.js"></script>
   <template>
     <link rel="stylesheet" href="component.css"></link>
@@ -7,7 +7,7 @@
     <shadow></shadow>
     <script type="text/json" id="ceci-definition">
       {
-        "name": "qr-code",
+        "name": "QR Code",
         "tags": ["qr-code"],
         "thumbnail": "",
         "broadcasts": {
@@ -17,11 +17,12 @@
 
         },
         "attributes": {
-          "data": {
-            "label": "Data",
-            "description": "The information encoded by the QR code.",
+          "text": {
+            "label": "Text",
+            "description": "Information to generate the QR Code.",
             "editable": "text",
-            "listener": false
+            "listener": true,
+            "defaultListener" : "green"
           }
         }
       }
@@ -32,7 +33,8 @@
       ready: function () {
         this.super();
       },
-      dataChanged: function (oldValue, newValue) {
+      textChanged: function (oldValue, newValue) {
+        this.text = '' + newValue;
         this.generate();
       },
       format: 'png',
@@ -48,7 +50,7 @@
         var img;
         try {
           img = document.createElement('img');
-          img.src = QRCode.generatePNG(this.data);
+          img.src = QRCode.generatePNG(this.text);
           this.clear();
           this.$.component_qr_code.appendChild(img);
         }
@@ -58,7 +60,7 @@
       },
       generateHTML: function () {
         try {
-          var div = QRCode.generateHTML(this.data);
+          var div = QRCode.generateHTML(this.text);
           this.clear();
           this.$.component_qr_code.appendChild(div);
         }
