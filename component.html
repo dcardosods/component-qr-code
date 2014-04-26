@@ -1,33 +1,36 @@
 <polymer-element name="ceci-qr-code" attributes="text" extends="ceci-element"
   text="bla bla blaaaaaaaaaahhh">
-  <script src="src/vendor/qr.js"></script>
+
+  <ceci-definition>
+    {
+      "name": "QR Code",
+      "tags": ["qr-code"],
+      "thumbnail": "",
+      "broadcasts": {
+
+      },
+      "listeners": {
+
+      },
+      "attributes": {
+        "text": {
+          "label": "Text",
+          "description": "Information to generate the QR Code",
+          "editable": "text",
+          "listener": true,
+          "defaultListener" : "green"
+        }
+      }
+    }
+  </ceci-definition>
+
   <template>
     <link rel="stylesheet" href="component.css"></link>
     <div id="component_qr_code"></div>
     <shadow></shadow>
-    <script type="text/json" id="ceci-definition">
-      {
-        "name": "QR Code",
-        "tags": ["qr-code"],
-        "thumbnail": "",
-        "broadcasts": {
-
-        },
-        "listeners": {
-
-        },
-        "attributes": {
-          "text": {
-            "label": "Text",
-            "description": "Information to generate the QR Code",
-            "editable": "text",
-            "listener": true,
-            "defaultListener" : "green"
-          }
-        }
-      }
-    </script>
   </template>
+
+  <script src="src/vendor/qr.js"></script>
   <script>
     Polymer('ceci-qr-code', {
       ready: function () {
