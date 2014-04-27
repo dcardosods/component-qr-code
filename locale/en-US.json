@@ -1,6 +1,6 @@
 {
 	"ceci-qr-code": "QR Code",
-	"ceci-qr-code": "Generates QR Code from text",
-	"ceci-qr-code/attributes/text/label": "Data",
-	"ceci-qr-code/attributes/text/description": "Information to generate the QR code"
+	"ceci-qr-code/description": "Generates a QR Code from a text",
+	"ceci-qr-code/attributes/text/label": "Text",
+	"ceci-qr-code/attributes/text/description": "Text to generate the QR Code"
 }
