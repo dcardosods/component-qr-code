@@ -1,0 +1,6 @@
+{
+	"ceci-qr-code": "QR Code",
+	"ceci-qr-code/description": "Gera um QR Code de um texto",
+	"ceci-qr-code/attributes/text/label": "Texto",
+	"ceci-qr-code/attributes/text/description": "Texto para gerar o QR Code"
+}
