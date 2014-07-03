@@ -1,18 +1,8 @@
-QR Code Appmaker component
-================
+# QR Code Appmaker component
 
 A web component for [Appmaker](https://github.com/mozilla-appmaker/appmaker).
 
 > It is a fork/port of [&lt;qr-code&gt; Web Component](https://github.com/educastellano/qr-code) by [Eduard C.](https://github.com/educastellano).
-
-
-Appmaker import:
-```
-<link rel="import" href="/qr-code">
-```
-
-Check if the component is being served going to `http://dcardosods.github.io/component-qr-code/component.css
-
 
 ## Usage
 
@@ -25,7 +15,9 @@ TODO
 Attribute  | Options                   | Default             | Description
 ---        | ---                       | ---                 | ---
 `data`     | *string*                  | `undefined`         | The information encoded by the QR code
-`format`   | `png`, `html`             | `png`               | Format of the QR code rendered inside the component.
+`format`*  | `png`, `html`             | `png`               | Format of the QR code rendered inside the component.
+
+\* Not implemented yet!
 
 ## Contributing
 
